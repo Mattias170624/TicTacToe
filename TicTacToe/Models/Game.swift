@@ -19,8 +19,16 @@ class Game {
         }
     }
     
-    func checkForWinOrLose(myList: [Int], name: String) {
-        let myListSet = Set(myList)
+    func checkForNoWinners(combinedList: [Int]) -> Bool {
+        if combinedList.count == 9 {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func checkForWin(myList: Player) -> Bool {
+        let myListSet = Set(myList.listOfCells)
         let winningArraySet: Set = [[1,2,3],
                                     [4,5,6],
                                     [7,8,9],
@@ -34,24 +42,10 @@ class Game {
             let winningSet = Set(winningArray)
             
             if winningSet.isSubset(of: myListSet) {
-                print("WIN!!")
-                prepareForEndScreen(bothLost: false, whatPlayerWon: name)
-                return
+                return true
             }
         }
-        
-        if myList.count >= 5 {
-            print("No Winners!")
-            prepareForEndScreen(bothLost: true, whatPlayerWon: name)
-            return
-        }
-    }
-    
-    func prepareForEndScreen(bothLost: Bool, whatPlayerWon: String) {
-        if bothLost {
-        } else {
-            print("player: \(whatPlayerWon) won!")
-        }
+        return false
     }
     
 }

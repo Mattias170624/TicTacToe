@@ -25,10 +25,10 @@ class ViewController: UIViewController {
         switch opponentSegment.selectedSegmentIndex {
         case 0:
             player1Type = 1
-            player2Type = 1
+            player2Type = 2
         case 1:
             player1Type = 1
-            player2Type = 2
+            player2Type = 3
         default:
             break
         }
