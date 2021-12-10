@@ -11,9 +11,12 @@ class GameViewController: UIViewController {
     
     var player1Type: Int!
     var player2Type: Int!
-    var startingPlayer: Int!
     var player1: Player!
     var player2: Player!
+    var startingPlayer: Int!
+    
+    @IBOutlet weak var player1Field: UILabel!
+    @IBOutlet weak var player2Field: UILabel!
     
     @IBOutlet weak var button1: UIButton!
     @IBOutlet weak var button2: UIButton!
@@ -28,8 +31,9 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        player1 = Player(listOfCells: [], playerType: player1Type, playerName: "Temp1")
-        player2 = Player(listOfCells: [], playerType: player2Type, playerName: "Temp2")
+        player2Field.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 1)
+        player1 = Player(listOfCells: [], playerType: player1Type, playerName: "Player 1")
+        player2 = Player(listOfCells: [], playerType: player2Type, playerName: "Player 2")
         
         assignButtonTags()
         displayPlayerTurn(player: (1...2).randomElement()! )
@@ -47,28 +51,19 @@ class GameViewController: UIViewController {
         button7.tag = 7
         button8.tag = 8
         button9.tag = 9
+        
     }
     
     func displayPlayerTurn(player: Int) {
         switch player {
         case 1:
+            player1Field.backgroundColor = .lightGray
+            player2Field.backgroundColor = .green
             startingPlayer = 2
-            
-            
         case 2:
+            player1Field.backgroundColor = .green
+            player2Field.backgroundColor = .lightGray
             startingPlayer = 1
-        default:
-            break
-        }
-    }
-    
-    func placeSymbolOnCell(player: Int, position: Int) {
-        switch player {
-        case 1:
-            print("player: \(player) at pos: \(position)")
-            
-        case 2:
-            print("player: \(player) at pos: \(position)")
         default:
             break
         }
@@ -78,24 +73,20 @@ class GameViewController: UIViewController {
         switch startingPlayer {
         case 1:
             if !Game().isCellTaken(cellTag: sender.tag, myList: player1, otherList: player2) {
-                placeSymbolOnCell(player: 1, position: sender.tag)
+                sender.setTitle("X", for: [])
                 
                 // Check for win, if not just switch players turn
                 Game().checkForWinOrLose(myList: player1.listOfCells, name: player1.playerName)
                 displayPlayerTurn(player: 1)
-            } else {
-                // Show red blinking at tag
             }
             
         case 2:
             if !Game().isCellTaken(cellTag: sender.tag, myList: player2, otherList: player1) {
-                placeSymbolOnCell(player: 2, position: sender.tag)
+                sender.setTitle("O", for: [])
                 
                 // Check for win, if not just switch players turn
                 Game().checkForWinOrLose(myList: player2.listOfCells, name: player2.playerName)
                 displayPlayerTurn(player: 2)
-            } else {
-                // Show red blinking at tag
             }
             
         default:
@@ -106,6 +97,5 @@ class GameViewController: UIViewController {
         print("Player 2: \(player2.listOfCells) \n")
         
     }
-    
     
 }
