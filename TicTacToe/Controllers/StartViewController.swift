@@ -13,19 +13,22 @@ class ViewController: UIViewController {
     @IBOutlet weak var opponentSegment: UISegmentedControl!
     @IBOutlet weak var startButton: UIButton!
     
-    var playerType: Int?
+    var player1Type: Int! = 1
+    var player2Type: Int! = 2
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
     @IBAction func segmentValue(_ sender: Any) {
         switch opponentSegment.selectedSegmentIndex {
         case 0:
-            playerType = 1
+            player1Type = 1
+            player2Type = 1
         case 1:
-            playerType = 2
+            player1Type = 1
+            player2Type = 2
         default:
             break
         }
@@ -33,6 +36,16 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "segueToGame", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueToGame" {
+            let destination = segue.destination as! GameViewController
+            
+            destination.player1Type = player1Type!
+            destination.player2Type = player2Type!
+        }
     }
 }
 
