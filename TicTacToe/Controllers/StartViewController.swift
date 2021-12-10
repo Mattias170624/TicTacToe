@@ -20,7 +20,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
     }
-
+    
     @IBAction func segmentValue(_ sender: Any) {
         switch opponentSegment.selectedSegmentIndex {
         case 0:
@@ -32,7 +32,6 @@ class ViewController: UIViewController {
         default:
             break
         }
-        
     }
     
     @IBAction func buttonPressed(_ sender: Any) {

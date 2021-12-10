@@ -66,13 +66,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player                       X" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QhW-cL-63K">
+                                <rect key="frame" x="114" y="700" width="186" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player                       O" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncT-wT-gEQ">
+                                <rect key="frame" x="114" y="112" width="186" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3k-e8-7iL">
                                 <rect key="frame" x="49" y="290" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="1">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="60"/>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="gray"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="Q97-LS-C0S" eventType="touchUpInside" id="OoL-jd-xRU"/>
                                 </connections>
@@ -81,9 +95,7 @@
                                 <rect key="frame" x="157" y="290" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="2">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="60"/>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="gray"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="Q97-LS-C0S" eventType="touchUpInside" id="e62-j0-Rdm"/>
                                 </connections>
@@ -92,9 +104,7 @@
                                 <rect key="frame" x="49" y="398" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="4">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="60"/>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="gray"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="Q97-LS-C0S" eventType="touchUpInside" id="iwR-Oh-BGv"/>
                                 </connections>
@@ -103,9 +113,7 @@
                                 <rect key="frame" x="157" y="398" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="5">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="60"/>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="gray"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="Q97-LS-C0S" eventType="touchUpInside" id="qIl-OL-8J4"/>
                                 </connections>
@@ -114,9 +122,7 @@
                                 <rect key="frame" x="265" y="398" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="6">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="60"/>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="gray"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="Q97-LS-C0S" eventType="touchUpInside" id="PqP-ym-GdX"/>
                                 </connections>
@@ -125,9 +131,7 @@
                                 <rect key="frame" x="49" y="506" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="7">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="60"/>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="gray"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="Q97-LS-C0S" eventType="touchUpInside" id="co7-Uh-6ug"/>
                                 </connections>
@@ -136,9 +140,7 @@
                                 <rect key="frame" x="157" y="506" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="8">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="60"/>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="gray"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="Q97-LS-C0S" eventType="touchUpInside" id="ZRe-FR-x8q"/>
                                 </connections>
@@ -147,9 +149,7 @@
                                 <rect key="frame" x="265" y="506" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="9">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="60"/>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="gray"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="Q97-LS-C0S" eventType="touchUpInside" id="pgI-ap-TjI"/>
                                 </connections>
@@ -158,9 +158,7 @@
                                 <rect key="frame" x="265" y="290" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray" title="3">
-                                    <fontDescription key="titleFontDescription" type="system" pointSize="60"/>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="gray"/>
                                 <connections>
                                     <action selector="buttonPressed:" destination="Q97-LS-C0S" eventType="touchUpInside" id="DtI-eb-A4O"/>
                                 </connections>
@@ -179,11 +177,13 @@
                         <outlet property="button7" destination="wUH-e1-J3b" id="liS-Z4-taq"/>
                         <outlet property="button8" destination="fUF-6Z-K6z" id="H7G-KA-WbI"/>
                         <outlet property="button9" destination="d2l-1q-17x" id="z7n-uf-UDL"/>
+                        <outlet property="player1Field" destination="QhW-cL-63K" id="eon-vx-ICT"/>
+                        <outlet property="player2Field" destination="ncT-wT-gEQ" id="lI2-u9-8ci"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="O6R-GG-vQ4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="745" y="117"/>
+            <point key="canvasLocation" x="744.92753623188412" y="116.51785714285714"/>
         </scene>
     </scenes>
     <resources>
