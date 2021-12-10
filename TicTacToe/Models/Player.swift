@@ -12,7 +12,6 @@ class Player {
     var playerType: Int = 0
     var playerName: String = ""
     
-    
     init(listOfCells: [Int], playerType: Int, playerName: String) {
         self.listOfCells = listOfCells
         self.playerType = playerType

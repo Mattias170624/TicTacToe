@@ -20,6 +20,7 @@
 		CD8517F427635FE300601048 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8517F327635FE300601048 /* Player.swift */; };
 		CD8517F627635FEF00601048 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8517F527635FEF00601048 /* Game.swift */; };
 		CD8517F82763650B00601048 /* RobotPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8517F72763650B00601048 /* RobotPlayer.swift */; };
+		CD8517FA2763BC8B00601048 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8517F92763BC8B00601048 /* ResultViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		CD8517F327635FE300601048 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		CD8517F527635FEF00601048 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		CD8517F72763650B00601048 /* RobotPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RobotPlayer.swift; sourceTree = "<group>"; };
+		CD8517F92763BC8B00601048 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +143,7 @@
 			children = (
 				CD8517C02763529000601048 /* StartViewController.swift */,
 				CD8517F127635BFE00601048 /* GameViewController.swift */,
+				CD8517F92763BC8B00601048 /* ResultViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				CD8517F227635BFE00601048 /* GameViewController.swift in Sources */,
 				CD8517F82763650B00601048 /* RobotPlayer.swift in Sources */,
 				CD8517F627635FEF00601048 /* Game.swift in Sources */,
+				CD8517FA2763BC8B00601048 /* ResultViewController.swift in Sources */,
 				CD8517C12763529000601048 /* StartViewController.swift in Sources */,
 				CD8517BD2763529000601048 /* AppDelegate.swift in Sources */,
 				CD8517F427635FE300601048 /* Player.swift in Sources */,
