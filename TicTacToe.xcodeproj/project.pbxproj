@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		CD8517BD2763529000601048 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8517BC2763529000601048 /* AppDelegate.swift */; };
 		CD8517BF2763529000601048 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8517BE2763529000601048 /* SceneDelegate.swift */; };
-		CD8517C12763529000601048 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8517C02763529000601048 /* ViewController.swift */; };
+		CD8517C12763529000601048 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8517C02763529000601048 /* StartViewController.swift */; };
 		CD8517C42763529000601048 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8517C22763529000601048 /* Main.storyboard */; };
 		CD8517C62763529200601048 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD8517C52763529200601048 /* Assets.xcassets */; };
 		CD8517C92763529200601048 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8517C72763529200601048 /* LaunchScreen.storyboard */; };
@@ -39,7 +39,7 @@
 		CD8517B92763529000601048 /* TicTacToe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TicTacToe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD8517BC2763529000601048 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD8517BE2763529000601048 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CD8517C02763529000601048 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CD8517C02763529000601048 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		CD8517C32763529000601048 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CD8517C52763529200601048 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD8517C82763529200601048 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -99,10 +99,11 @@
 		CD8517BB2763529000601048 /* TicTacToe */ = {
 			isa = PBXGroup;
 			children = (
-				CD8517BC2763529000601048 /* AppDelegate.swift */,
+				CD8517ED2763536800601048 /* Models */,
+				CD8517EC2763534D00601048 /* Controllers */,
+				CD8517EE2763536F00601048 /* Views */,
 				CD8517BE2763529000601048 /* SceneDelegate.swift */,
-				CD8517C02763529000601048 /* ViewController.swift */,
-				CD8517C22763529000601048 /* Main.storyboard */,
+				CD8517BC2763529000601048 /* AppDelegate.swift */,
 				CD8517C52763529200601048 /* Assets.xcassets */,
 				CD8517C72763529200601048 /* LaunchScreen.storyboard */,
 				CD8517CA2763529200601048 /* Info.plist */,
@@ -125,6 +126,29 @@
 				CD8517DF2763529200601048 /* TicTacToeUITestsLaunchTests.swift */,
 			);
 			path = TicTacToeUITests;
+			sourceTree = "<group>";
+		};
+		CD8517EC2763534D00601048 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD8517C02763529000601048 /* StartViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CD8517ED2763536800601048 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CD8517EE2763536F00601048 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD8517C22763529000601048 /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD8517C12763529000601048 /* ViewController.swift in Sources */,
+				CD8517C12763529000601048 /* StartViewController.swift in Sources */,
 				CD8517BD2763529000601048 /* AppDelegate.swift in Sources */,
 				CD8517BF2763529000601048 /* SceneDelegate.swift in Sources */,
 			);
