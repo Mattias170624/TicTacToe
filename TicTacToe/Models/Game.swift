@@ -9,12 +9,25 @@ import Foundation
 
 class Game {
     
-    func isCellTaken(cellTag: Int, myList: Player, otherList: Player) -> Bool {
-        if myList.listOfCells.contains(cellTag) || otherList.listOfCells.contains(cellTag) {
+    func performPlayerActions(cellTag: Int, myPlayer: Player, otherPlayer: Player) -> String {
+        if !isCellTaken(cellTag: cellTag, combinedList: myPlayer.listOfCells + otherPlayer.listOfCells) {
+            myPlayer.listOfCells.append(cellTag)
+            
+            if checkForWin(myPlayer: myPlayer) {
+                return "player\(myPlayer.playerType)Won"
+                
+            } else if checkForNoWinners(combinedList: myPlayer.listOfCells + otherPlayer.listOfCells) {
+                return "Draw"
+            }
+            return "SwitchTurn"
+        }
+        return ""
+    }
+    
+    func isCellTaken(cellTag: Int, combinedList: [Int]) -> Bool {
+        if combinedList.contains(cellTag) {
             return true
         } else {
-            // If cell is not taken, just add it to myList
-            myList.listOfCells.append(cellTag)
             return false
         }
     }
@@ -27,8 +40,8 @@ class Game {
         }
     }
     
-    func checkForWin(myList: Player) -> Bool {
-        let myListSet = Set(myList.listOfCells)
+    func checkForWin(myPlayer: Player) -> Bool {
+        let myListSet = Set(myPlayer.listOfCells)
         let winningArraySet: Set = [[1,2,3],
                                     [4,5,6],
                                     [7,8,9],

@@ -33,24 +33,25 @@ class GameViewController: UIViewController {
         super.viewDidLoad()
         
         player2Field.transform = CGAffineTransform(rotationAngle: CGFloat.pi / 1)
-        player1 = Player(listOfCells: [], playerType: player1Type, playerName: "Player 1")
-        player2 = Player(listOfCells: [], playerType: player2Type, playerName: "Player 2")
+        player1 = Player(listOfCells: [], playerType: player1Type)
+        player2 = Player(listOfCells: [], playerType: player2Type)
         
         // Random player starts
-        displayPlayerTurn(player: (1...2).randomElement()! )
-        
+        switchPlayerTurns(player: (1...2).randomElement()! )
     }
     
-    func displayPlayerTurn(player: Int) {
+    func switchPlayerTurns(player: Int) {
+        print("Player: \(player)'s turn\n")
+        
         switch player {
         case 1:
-            player1Field.backgroundColor = .lightGray
-            player2Field.backgroundColor = .green
-            startingPlayer = 2
-        case 2:
             player1Field.backgroundColor = .green
             player2Field.backgroundColor = .lightGray
             startingPlayer = 1
+        case 2:
+            player1Field.backgroundColor = .lightGray
+            player2Field.backgroundColor = .green
+            startingPlayer = 2
         default:
             break
         }
@@ -77,35 +78,33 @@ class GameViewController: UIViewController {
     @IBAction func buttonPressed(_ sender: UIButton) {
         switch startingPlayer {
         case 1:
-            if !Game().isCellTaken(cellTag: sender.tag, myList: player1, otherList: player2) {
+            switch Game().performPlayerActions(cellTag: sender.tag, myPlayer: player1, otherPlayer: player2) {
+            case "SwitchTurn":
                 sender.setTitle("X", for: [])
-                
-                // Check for win, if not just switch players turn
-                if Game().checkForWin(myList: player1) {
-                    goToWinningScreen(winningPlayer: 1, bothLost: false)
-                } else {
-                    if Game().checkForNoWinners(combinedList: player1.listOfCells + player2.listOfCells) {
-                        goToWinningScreen(winningPlayer: 0, bothLost: true)
-                    } else {
-                        displayPlayerTurn(player: 1)
-                    }
-                }
+                switchPlayerTurns(player: 2)
+            case "player1Won":
+                goToWinningScreen(winningPlayer: 1, bothLost: false)
+            case "player2Won":
+                goToWinningScreen(winningPlayer: 2, bothLost: false)
+            case "Draw":
+                goToWinningScreen(winningPlayer: 0, bothLost: true)
+            default:
+                break
             }
             
         case 2:
-            if !Game().isCellTaken(cellTag: sender.tag, myList: player2, otherList: player1) {
+            switch Game().performPlayerActions(cellTag: sender.tag, myPlayer: player2, otherPlayer: player1) {
+            case "SwitchTurn":
                 sender.setTitle("O", for: [])
-                
-                // Check for win, if not just switch players turn
-                if Game().checkForWin(myList: player2) {
-                    goToWinningScreen(winningPlayer: 2, bothLost: false)
-                } else {
-                    if Game().checkForNoWinners(combinedList: player1.listOfCells + player2.listOfCells) {
-                        goToWinningScreen(winningPlayer: 0, bothLost: true)
-                    } else {
-                        displayPlayerTurn(player: 2)
-                    }
-                }
+                switchPlayerTurns(player: 1)
+            case "player1Won":
+                goToWinningScreen(winningPlayer: 1, bothLost: false)
+            case "player2Won":
+                goToWinningScreen(winningPlayer: 2, bothLost: false)
+            case "Draw":
+                goToWinningScreen(winningPlayer: 0, bothLost: true)
+            default:
+                break
             }
             
         default:
